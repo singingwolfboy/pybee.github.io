@@ -8,8 +8,6 @@ install: "pip install lektor"
 script: "lektor build"
 deploy:
   provider: script
-  script:
-    - "cat ~/.git/config"
-    - "lektor deploy ghpages-https"
+  script: "cat ~/.git/config && lektor deploy ghpages-https"
   on:
     branch: lektor
