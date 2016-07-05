@@ -7,7 +7,7 @@ cache:
 before_install:
   - git --version
   - sudo apt-get -qq update
-  - sudo apt-get install --only-upgrade -y git-core
+  - sudo apt-get install -y git-core
   - git --version
 install: "pip install lektor"
 script: "lektor build"
