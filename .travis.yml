@@ -4,6 +4,9 @@ cache:
   directories:
     - $HOME/.cache/pip
     - $HOME/.cache/lektor/builds
+before_install:
+  - sudo apt-get -qq update
+  - sudo apt-get upgrade -y git-core
 install: "pip install lektor"
 script: "lektor build"
 deploy:
