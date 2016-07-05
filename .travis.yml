@@ -4,10 +4,10 @@ cache:
   directories:
     - $HOME/.cache/pip
     - $HOME/.cache/lektor/builds
-install: "pip install lektor"
+install: "pip install git+https://github.com/lektor/lektor.git#egg=lektor"
 script: "lektor build"
 deploy:
   provider: script
-  script: "cat .git/config && lektor deploy ghpages-https"
+  script: "lektor deploy ghpages-https"
   on:
     branch: lektor
