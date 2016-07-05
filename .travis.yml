@@ -6,7 +6,7 @@ cache:
     - $HOME/.cache/lektor/builds
 before_install:
   - sudo apt-get -qq update
-  - sudo apt-get upgrade -y git-core
+  - sudo apt-get upgrade -y -o Dpkg::Options::="--force-confnew" git-core
 install: "pip install lektor"
 script: "lektor build"
 deploy:
