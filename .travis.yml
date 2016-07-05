@@ -4,6 +4,12 @@ cache:
   directories:
     - $HOME/.cache/pip
     - $HOME/.cache/lektor/builds
+addons:
+  apt:
+    sources:
+    - git-core
+    packages:
+    - git
 before_install:
   - which git
   - git --version
