@@ -5,9 +5,11 @@ cache:
     - $HOME/.cache/pip
     - $HOME/.cache/lektor/builds
 before_install:
+  - which git
   - git --version
   - sudo apt-get -qq update
-  - sudo apt-get install -y git-core
+  - sudo apt-get install -y git-all
+  - which git
   - git --version
 install: "pip install lektor"
 script: "lektor build"
