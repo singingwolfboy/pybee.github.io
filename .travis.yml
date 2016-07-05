@@ -8,7 +8,7 @@ before_install:
   - which git
   - git --version
   - sudo apt-get -qq update
-  - sudo apt-get install -y git-all
+  - sudo apt-get install -y git
   - which git
   - git --version
 install: "pip install lektor"
