@@ -4,9 +4,13 @@ cache:
   directories:
     - $HOME/.cache/pip
     - $HOME/.cache/lektor/builds
+before_install:
+  - git --version
+  - sudo apt-get -qq update
+  - sudo apt-get install --only-upgrade -y git-core
+  - git --version
 install: "pip install lektor"
 script: "lektor build"
-after_script: "git --version"
 deploy:
   provider: script
   script: "lektor deploy ghpages-https"
